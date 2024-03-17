@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
 export class AuthTokenDto {
   @IsString()
   @IsNotEmpty()
@@ -7,9 +7,4 @@ export class AuthTokenDto {
   @IsString()
   @IsNotEmpty()
   refresh_token: string;
-
-  @IsString()
-  @IsNotEmpty()
-  @IsOptional()
-  get_stream_token?: string;
 }
